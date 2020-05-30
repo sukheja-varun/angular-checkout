@@ -1,0 +1,92 @@
+// Ref: https://codepen.io/trevanhetzel/pen/LkaRAJ
+
+$default-background: var(--theme-dark);
+$current-background: var(--theme-light-orange);
+$complete-background: var(--theme-dark-orange);
+$circle-background: var(--theme-light);
+
+.stepper {
+  display: flex;
+  margin: 100px;
+  padding: 0;
+  width: 60rem;
+  list-style: none;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    content: "";
+    width: calc(100% - 20px);
+    background: $default-background;
+  }
+}
+
+.stepper-item {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex: 100%;
+  padding: 20px 20px 20px 40px;
+  background: repeating-linear-gradient(
+    -65deg,
+    $default-background,
+    $default-background 20px,
+    $default-background 20px,
+    $default-background 40px
+  );
+  margin: 0 0 0 -19px;
+  -webkit-clip-path: polygon(
+    20px 50%,
+    0% 0%,
+    calc(100% - 20px) 0%,
+    100% 50%,
+    calc(100% - 20px) 100%,
+    0% 100%
+  );
+
+  &.current {
+    background: $current-background;
+    font-weight: bold;
+  }
+
+  &.complete {
+    background: repeating-linear-gradient(
+      -65deg,
+      $complete-background,
+      $complete-background 20px,
+      $complete-background 20px,
+      $complete-background 40px
+    );
+  }
+
+  &:first-child {
+    padding: 20px;
+    -webkit-clip-path: polygon(
+      0% 0%,
+      calc(100% - 20px) 0%,
+      100% 50%,
+      calc(100% - 20px) 100%,
+      0% 100%
+    );
+  }
+
+  &:last-child {
+    -webkit-clip-path: polygon(20px 50%, 0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
+
+.circle {
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 8px;
+  margin-right: 10px;
+
+  background: $circle-background;
+  border: 2px solid $circle-background;
+  color: $default-background;
+  text-align: center;
+}
