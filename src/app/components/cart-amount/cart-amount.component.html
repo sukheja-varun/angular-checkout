@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="amount">
+    <div class="cart-total">
+      Cart Total
+      <span class="currency">{{ "1289" | currency: "USD" }}</span>
+    </div>
+    <div class="tax">
+      Tax
+      <span class="currency">{{
+        "23" | currency: "USD":"symbol":"1.0-0"
+      }}</span>
+    </div>
+    <div class="shipping-charges">
+      Shipping Charges
+      <span class="currency">{{ 23 | currency: "USD":"symbol":"1.0-0" }}</span>
+    </div>
+  </div>
+  <div class="action-container">
+    <div class="select-address">
+      <span>Select Address</span>
+      <span>></span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+$divider-color: var(--theme-dark);
+$font-orange: var(--theme-dark-orange);
+$btn-background: var(--theme-dark-orange);
+$btn-color: var(--theme-light);
+
+.container {
+  border-top: 1px solid $divider-color;
+  padding: 10px 0px 10px 20px;
+  display: flex;
+  flex-direction: column;
+  @media only screen and (min-width: 600px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.amount {
+  margin-bottom: 10px;
+  .cart-total {
+    font-size: 1.5rem;
+  }
+
+  .currency {
+    margin-left: 10px;
+    color: $font-orange;
+  }
+}
+.action-container {
+  margin-bottom: 10px;
+  .select-address {
+    height: 20px;
+    font-weight: 600;
+    background: $btn-background;
+    color: $btn-color;
+    width: 200px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
