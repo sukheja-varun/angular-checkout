@@ -1,0 +1,11 @@
+<div class="product-container">
+  <div class="img-container">
+    <img class="product-img" [src]="product.image" [alt]="product.name" />
+  </div>
+  <div class="product-name">{{ product?.name }}</div>
+  <div class="product-action-bar">
+    <div class="btn">-</div>
+    <div class="quantity">{{ product?.quantity }}</div>
+    <div class="btn">+</div>
+  </div>
+</div>

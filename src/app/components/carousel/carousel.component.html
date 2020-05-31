@@ -1,0 +1,24 @@
+<div class="carousel">
+  <div class="slides">
+    <ng-container *ngFor="let dataItem of dataList; let index = index">
+      <app-product-thumbnail
+        *ngIf="
+          index >= currentPage * dataPerPage &&
+          index < currentPage * dataPerPage + dataPerPage
+        "
+        [product]="dataItem"
+      ></app-product-thumbnail>
+    </ng-container>
+  </div>
+  <div class="navigation-indicators">
+    <div
+      *ngFor="let indicator of indicators; let index = index"
+      [ngClass]="{ current: index === currentPage }"
+      (click)="currentPage = index"
+    ></div>
+  </div>
+  <div class="navigation-buttons">
+    <button class="prev-button" (click)="onPrev()"><</button>
+    <button class="next-button" (click)="onNext()">></button>
+  </div>
+</div>

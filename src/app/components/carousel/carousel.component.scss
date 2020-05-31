@@ -1,0 +1,54 @@
+$indicator-background: var(--theme-light-orange);
+$indicator-current-background: var(--theme-dark-orange);
+$navigation-btn-color: #d4cabb;
+
+.carousel {
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.navigation-indicators {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+  & div {
+    background: $indicator-background;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid $indicator-current-background;
+    cursor: pointer;
+    margin: 0px 20px;
+  }
+
+  & div.current {
+    background-color: $indicator-current-background;
+  }
+}
+
+.navigation-buttons {
+  .prev-button,
+  .next-button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: $navigation-btn-color;
+    font-size: 1.5rem;
+    padding-bottom: 7px;
+    position: absolute;
+    top: 30%;
+    outline: none;
+    cursor: pointer;
+  }
+  .prev-button {
+    left: 20px;
+  }
+  .next-button {
+    right: 20px;
+  }
+}
