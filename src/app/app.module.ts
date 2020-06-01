@@ -7,6 +7,7 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { ProductThumbnailComponent } from './components/product-thumbnail/product-thumbnail.component';
 import { CartAmountComponent } from './components/cart-amount/cart-amount.component';
 import { ModalComponent } from './components/modal/modal.component';
+import { QuantityReviewComponent } from './container/quantity-review/quantity-review.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ModalComponent } from './components/modal/modal.component';
     CarouselComponent,
     ProductThumbnailComponent,
     CartAmountComponent,
-    ModalComponent
+    ModalComponent,
+    QuantityReviewComponent
   ],
   imports: [
     BrowserModule

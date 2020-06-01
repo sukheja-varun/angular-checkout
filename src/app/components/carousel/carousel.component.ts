@@ -28,7 +28,6 @@ export class CarouselComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   onResize(event?) {
-    console.log(window.innerWidth);
     if (window.innerWidth <= 480) {
       this.dataPerPage = 1;
     }

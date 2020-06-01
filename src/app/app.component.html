@@ -3,9 +3,6 @@
 <app-modal [(isOpen)]="isModalOpen">
   <ng-template>
     <app-stepper></app-stepper>
-    <div class="carousel-wrapper">
-      <app-carousel [dataList]="productList"></app-carousel>
-      <app-cart-amount [amount]="amount"></app-cart-amount>
-    </div>
+    <app-quantity-review></app-quantity-review>
   </ng-template>
 </app-modal>
