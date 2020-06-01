@@ -9,11 +9,21 @@ import { CartService } from './services/cart.service';
 })
 export class AppComponent {
   isModalOpen = false;
+  activeStep = 1;
 
   constructor() { }
 
   onOpenModal() {
     this.isModalOpen = true;
+  }
+
+  onModalClose() {
+    this.isModalOpen = false;
+    this.activeStep = 1;
+  }
+
+  onStepChange(step) {
+    this.activeStep = step;
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-stepper',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StepperComponent implements OnInit {
 
   steps = ['Review & Schedule', 'Select Address', 'Check Quote', 'Order Placed'];
-  currentStep = 1;
+  @Input() currentStep = 1;
 
   constructor() { }
 

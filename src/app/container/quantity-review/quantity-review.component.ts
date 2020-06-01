@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ProductI } from 'src/app/models/product.model';
 import { CartService } from 'src/app/services/cart.service';
 
@@ -10,6 +10,7 @@ import { CartService } from 'src/app/services/cart.service';
 export class QuantityReviewComponent implements OnInit {
   productList: ProductI[] = [];
   amount = { cartTotal: 0, tax: 23, shippingCharges: 23 };
+  @Output() next = new EventEmitter();
 
   constructor(private _cartService: CartService) { }
 
@@ -29,6 +30,10 @@ export class QuantityReviewComponent implements OnInit {
       (total, product) => total + product.price * product.quantity,
       0
     );
+  }
+
+  onNextPage() {
+    this.next.emit();
   }
 
 }

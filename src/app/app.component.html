@@ -1,8 +1,15 @@
 <h1>Welcome</h1>
 <button (click)="onOpenModal()">Open Checkout Modal</button>
-<app-modal [(isOpen)]="isModalOpen">
+<app-modal [isOpen]="isModalOpen" (isOpenChange)=onModalClose()>
   <ng-template>
-    <app-stepper></app-stepper>
-    <app-quantity-review></app-quantity-review>
+    <app-stepper [currentStep]="activeStep"></app-stepper>
+    <span [ngSwitch]="activeStep">
+      <p *ngSwitchCase="1">
+        <app-quantity-review (next)="onStepChange(2)"></app-quantity-review>
+      </p>
+      <p *ngSwitchCase="2">
+        <app-select-address></app-select-address>
+      </p>
+    </span>
   </ng-template>
 </app-modal>

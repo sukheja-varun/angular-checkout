@@ -8,6 +8,7 @@ import { ProductThumbnailComponent } from './components/product-thumbnail/produc
 import { CartAmountComponent } from './components/cart-amount/cart-amount.component';
 import { ModalComponent } from './components/modal/modal.component';
 import { QuantityReviewComponent } from './container/quantity-review/quantity-review.component';
+import { SelectAddressComponent } from './container/select-address/select-address.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QuantityReviewComponent } from './container/quantity-review/quantity-re
     ProductThumbnailComponent,
     CartAmountComponent,
     ModalComponent,
-    QuantityReviewComponent
+    QuantityReviewComponent,
+    SelectAddressComponent
   ],
   imports: [
     BrowserModule

@@ -1,4 +1,4 @@
 <div class="container">
     <app-carousel [dataList]="productList"></app-carousel>
-    <app-cart-amount [amount]="amount"></app-cart-amount>
+    <app-cart-amount [amount]="amount" (next)="onNextPage()"></app-cart-amount>
   </div>
