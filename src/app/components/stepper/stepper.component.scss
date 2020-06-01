@@ -10,6 +10,7 @@ $circle-background: var(--theme-light);
   padding: 0;
   list-style: none;
   position: relative;
+  margin: 3px;
 
   &::before {
     position: absolute;
@@ -24,7 +25,7 @@ $circle-background: var(--theme-light);
 
 .stepper-item {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   flex: 100%;
   padding: 20px 20px 20px 40px;
@@ -62,6 +63,7 @@ $circle-background: var(--theme-light);
 
   &:first-child {
     padding: 20px;
+    margin: 0;
     -webkit-clip-path: polygon(
       0% 0%,
       calc(100% - 20px) 0%,
@@ -87,4 +89,22 @@ $circle-background: var(--theme-light);
   border: 2px solid $circle-background;
   color: $default-background;
   text-align: center;
+}
+
+@media only screen and (max-width: 480px) {
+  .stepper-item {
+    flex-direction: column;
+    font-size: 0.75rem;
+    padding: 20px 20px 20px 30px;
+    .label {
+      margin-left: 5px;
+      margin-top: 5px;
+    }
+  }
+  .circle {
+    width: 13px;
+    height: 13px;
+    padding: 5px;
+    margin-right: 10px;
+  }
 }

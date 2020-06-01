@@ -1,6 +1,7 @@
 $indicator-background: var(--theme-light-orange);
 $indicator-current-background: var(--theme-dark-orange);
 $navigation-btn-color: #d4cabb;
+$navigation-btn-background: var(--theme-light);
 
 .carousel {
   position: relative;
@@ -15,7 +16,10 @@ $navigation-btn-color: #d4cabb;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px 0;
+  margin: 10px 0;
+  @media only screen and (min-width: 480px) {
+    margin: 20px 0;
+  }
 
   & div {
     background: $indicator-background;
@@ -43,9 +47,11 @@ $navigation-btn-color: #d4cabb;
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    border :1px;
     color: $navigation-btn-color;
-    font-size: 1.5rem;
-    padding-bottom: 7px;
+    background: $navigation-btn-background;
+    font-weight: 500;
+    font-size: 2rem;
     position: absolute;
     top: 30%;
     outline: none;

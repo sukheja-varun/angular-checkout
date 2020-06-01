@@ -31,9 +31,11 @@ export class CarouselComponent implements OnInit {
     console.log(window.innerWidth);
     if (window.innerWidth <= 480) {
       this.dataPerPage = 1;
-    } else if (window.innerWidth <= 768) {
+    }
+    else if (window.innerWidth <= 1024) {
       this.dataPerPage = 2;
-    } else {
+    }
+    else {
       this.dataPerPage = 3;
     }
     this.initVariables();

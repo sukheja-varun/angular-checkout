@@ -9,7 +9,7 @@ $img-background: whitesmoke;
 }
 
 .img-container {
-  height: 250px;
+  height: 200px;
   background: $img-background;
   display: flex;
   align-items: center;
@@ -17,7 +17,13 @@ $img-background: whitesmoke;
 
   .product-img {
     width: 100%;
-    max-height: 250px;
+    max-height: 200px;
+  }
+  @media only screen and (min-width: 480px) {
+    height: 250px;
+    .product-img {
+      max-height: 250px;
+    }
   }
 }
 
@@ -28,19 +34,29 @@ $img-background: whitesmoke;
 }
 .product-action-bar {
   display: flex;
-  height: 50px;
-  font-size: 1.5rem;
+  height: 30px;
+  font-size: 1rem;
   text-align: center;
   .btn {
-    padding: 10px;
+    padding: 5px;
     width: 100px;
     background: $btn-background;
     color: $btn-text;
     cursor: pointer;
   }
   .quantity {
-    padding: 13px;
+    padding: 5px;
     width: 100%;
     background: $quantity-background;
+  }
+  @media only screen and (min-width: 480px) {
+    height: 50px;
+    font-size: 1.5rem;
+    .btn {
+      padding: 10px;
+    }
+    .quantity {
+      padding: 13px;
+    }
   }
 }

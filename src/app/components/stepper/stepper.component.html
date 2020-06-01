@@ -1,7 +1,4 @@
 <ul class="stepper">
-  <!-- <li class="stepper__item complete">Step 1</li>
-  <li class="stepper__item current">Step 2</li>
-  <li class="stepper__item">Step 3</li> -->
   <li
     *ngFor="let step of steps; let index = index"
     class="stepper-item"
@@ -11,6 +8,6 @@
     }"
   >
     <div class="circle">{{ index + 1 }}</div>
-    <div>{{ step }}</div>
+    <div class="label">{{ step }}</div>
   </li>
 </ul>

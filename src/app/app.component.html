@@ -1,4 +1,11 @@
 <h1>Welcome</h1>
-<app-stepper></app-stepper>
-<app-carousel [dataList]="productList"></app-carousel>
-<app-cart-amount [amount]="amount"></app-cart-amount>
+<button (click)="onOpenModal()">Open Checkout Modal</button>
+<app-modal [(isOpen)]="isModalOpen">
+  <ng-template>
+    <app-stepper></app-stepper>
+    <div class="carousel-wrapper">
+      <app-carousel [dataList]="productList"></app-carousel>
+      <app-cart-amount [amount]="amount"></app-cart-amount>
+    </div>
+  </ng-template>
+</app-modal>

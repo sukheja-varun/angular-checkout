@@ -10,11 +10,16 @@ import { CartService } from './services/cart.service';
 export class AppComponent {
   productList: ProductI[] = [];
   amount = { cartTotal: 0, tax: 23, shippingCharges: 23 };
+  isModalOpen = false;
 
   constructor(private _cartService: CartService) { }
 
   ngOnInit(): void {
     this.subscribeProductsChange();
+  }
+
+  onOpenModal() {
+    this.isModalOpen = true;
   }
 
   subscribeProductsChange() {
