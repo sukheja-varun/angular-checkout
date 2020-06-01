@@ -1,15 +1,13 @@
 // Ref: https://codepen.io/trevanhetzel/pen/LkaRAJ
 
 $default-background: var(--theme-dark);
-$current-background: var(--theme-light-orange);
-$complete-background: var(--theme-dark-orange);
+$current-background: var(--theme-dark-orange);
+$complete-background: var(--theme-light-orange);
 $circle-background: var(--theme-light);
 
 .stepper {
   display: flex;
-  margin: 100px;
   padding: 0;
-  width: 60rem;
   list-style: none;
   position: relative;
 

@@ -4,8 +4,8 @@
   </div>
   <div class="product-name">{{ product?.name }}</div>
   <div class="product-action-bar">
-    <div class="btn">-</div>
+    <div class="btn" (click)="onUpdateQuantity(product?.quantity - 1)">-</div>
     <div class="quantity">{{ product?.quantity }}</div>
-    <div class="btn">+</div>
+    <div class="btn" (click)="onUpdateQuantity(product?.quantity + 1)">+</div>
   </div>
 </div>

@@ -1,4 +1,4 @@
-<div class="carousel">
+<div class="carousel" *ngIf="dataList.length">
   <div class="slides">
     <ng-container *ngFor="let dataItem of dataList; let index = index">
       <app-product-thumbnail

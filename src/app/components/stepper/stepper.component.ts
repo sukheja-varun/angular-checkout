@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class StepperComponent implements OnInit {
 
   steps = ['Review & Schedule', 'Select Address', 'Check Quote', 'Order Placed'];
-  currentStep = 2;
+  currentStep = 1;
 
   constructor() { }
 
